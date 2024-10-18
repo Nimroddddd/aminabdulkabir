@@ -18,23 +18,22 @@ function Skills() {
     }
 
     return(
-      <div className="flex flex-col justify-center items-center py-6 border w-28 hover:scale-110 duration-500" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} style={{color: mouseOn ? skill.color : "black", borderColor: mouseOn ? skill.color : "#fff"}}>
+      <div className="flex flex-col justify-center items-center py-2 px-1 md:py-6 border w-20 md:w-28 md:h-36 hover:scale-110 duration-500" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} style={{color: mouseOn ? skill.color : "black", borderColor: mouseOn ? skill.color : "#fff"}}>
         {skill.icon}
-        <p className="text-center mt-3">{skill.name}</p>
+        <p className="text-center text-sm mt-3">{skill.name}</p>
       </div>
     )
   }
 
   return (
-    <div id="Skills">
-      <h2 className="text-center text-5xl mb-10 font-caveat"><span className="underline">Sk</span>ills</h2>
-      <p className="text-center text-2xl"><i>Frontend</i></p>
-      <div className="flex flex-wrap justify-center mt-10 gap-8 mx-36">
+    <div id="Skills" className="mx-10 md:mx-36">
+      <h2 className="text-center text-2xl sm:text-5xl mb-10 font-caveat"><span className="underline">Sk</span>ills</h2>
+      <p className="text-center text-xl sm:text-2xl"><i>Frontend</i></p>
+      <div className="flex flex-wrap justify-center mt-10 gap-8">
         {frontend.map(displaySkills)}
       </div>
-      <p className="text-center text-2xl mt-16 ml-16"><i>Backend</i></p>
-      <div className="flex flex-wrap justify-center mt-10 gap-8 mx-36">
-        
+      <p className="text-center text-xl sm:text-2xl mt-16"><i>Backend</i></p>
+      <div className="flex flex-wrap justify-center mt-10 gap-8">
         {backend.map(displaySkills)}
       </div>
       
