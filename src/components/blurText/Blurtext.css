@@ -1,4 +1,4 @@
 .word {
   display: inline-block;
-  will-change: transform, filter, opacity;
+  /* will-change: transform, filter, opacity; */
 }
