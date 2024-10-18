@@ -5,7 +5,7 @@ import {BlurText} from "./blurText/Blurtext"
 
 function Intro() {
   return (
-    <div className="flex flex-col items-center gap-3 mt-32 mx-14">
+    <div className="flex flex-col items-center gap-3 pb-10 pt-32 px-14 bg-blue-100 bg-gradient-to-br from-blue-100 to-blue-300">
       <p className="text-xl">Hi there! I am</p>
       <BlurText text="Amin Abdulkabir" className="text-4xl md:text-7xl font-lobster pb-14 text-primary-text" delay={100} />
       <GradientText
