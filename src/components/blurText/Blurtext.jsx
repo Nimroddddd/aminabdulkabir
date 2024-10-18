@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
 import { useSprings, animated } from '@react-spring/web';
-
 import './BlurText.css';
 
 export const BlurText = ({ text, delay = 200, className = '' }) => {
