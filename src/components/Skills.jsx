@@ -32,7 +32,7 @@ function Skills() {
       <div className="flex flex-wrap justify-center mt-10 gap-8 mx-36">
         {frontend.map(displaySkills)}
       </div>
-      <p className="text-center text-2xl mt-16 ml-16">Backend</p>
+      <p className="text-center text-2xl mt-16 ml-16"><i>Backend</i></p>
       <div className="flex flex-wrap justify-center mt-10 gap-8 mx-36">
         
         {backend.map(displaySkills)}

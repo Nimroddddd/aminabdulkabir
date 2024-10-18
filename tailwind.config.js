@@ -14,7 +14,17 @@ export default {
         "twitter-blue": "#1DA1F2",
         "primary-text": "#081A3E",
         "text-color": "#1D438A"
-      }
+      },
+      keyframes: {
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      animation: {
+        gradient: 'gradient 8s linear infinite', // Use the keyframes defined above
+      },
     },
   },
   plugins: [],
