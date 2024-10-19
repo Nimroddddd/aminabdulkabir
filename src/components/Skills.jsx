@@ -26,7 +26,7 @@ function Skills() {
   }
 
   return (
-    <div id="Skills" className="px-10 md:px-36 py-24 bg-gradient-to-br from-blue-100 to-blue-300">
+    <div id="Skills" className="px-10 md:px-36 py-24 bg-gradient-to-br from-blue-200 to-cyan-200">
       <h2 className="text-center text-2xl sm:text-5xl mb-10 font-caveat"><span className="underline">Sk</span>ills</h2>
       <p className="text-center text-xl sm:text-2xl"><i>Frontend</i></p>
       <div className="flex flex-wrap justify-center mt-10 gap-8">
