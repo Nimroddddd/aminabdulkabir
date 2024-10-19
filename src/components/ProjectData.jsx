@@ -3,7 +3,7 @@ const ProjectData = [
     key: 1,
     name: "Noti.fy",
     image: "notify.png",
-    description: "A simple notes app that keeps lets you write down notes and keep them for future reference",
+    description: "A simple notes app that lets you write down notes and keep them for future reference",
     tools: ["React.js", "Express.js", "PostgreSQL"],
     live: "https://project-notify.netlify.app",
     code: "https://github.com",

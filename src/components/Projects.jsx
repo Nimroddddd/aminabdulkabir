@@ -11,8 +11,8 @@ function Projects() {
           <p className="text-xl mb-8">{project.name}</p>
           <p>{project.description}</p>
           <div className="flex justify-between mt-8 text-base sm:text-xl">
-            <a href={project.live} target="_blank"><button className="border border-black h-10 w-20 sm:w-32 bg-blue-700 text-white hover:scale-110">Live</button></a>
-            <a href={project.code} target="_blank"><button className="border border-blue-700 h-10 w-20 sm:w-32">Code {project.github}</button></a>
+            <a href={project.live} target="_blank"><button className=" h-10 w-20 sm:w-32 bg-blue-700 text-white hover:bg-blue-500">Live</button></a>
+            <a href={project.code} target="_blank"><button className="border border-blue-700 h-10 w-20 sm:w-32 hover:bg-blue-700 hover:text-white" >Code {project.github}</button></a>
           </div>
         </div>
       </div>

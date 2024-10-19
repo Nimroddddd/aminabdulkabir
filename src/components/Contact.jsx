@@ -37,7 +37,7 @@ function Contact() {
   }
 
   return(
-    <div className="flex flex-col items-center py-14">
+    <div className="flex flex-col items-center py-14 bg-gradient-to-br from-blue-100 to-blue-300" id="Contact">
       <h2 className="text-center text-2xl sm:text-5xl mb-10 font-caveat"><span className="underline">Cont</span>act me</h2>
       <p className="w-64 sm:w-96 text-lg mb-8">Fill in the form below to reach out to me for prompt response.</p>
       <form className="flex flex-col gap-5 w-64 sm:w-96" onSubmit={handleSubmit}>
