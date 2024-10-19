@@ -10,7 +10,7 @@ import Footer from "./Footer"
 
 function App() {
   return (
-    <div className="w-full bg-cyan-100 h-full pb-10 text-text-color">
+    <div className="w-full bg-cyan-200 h-full pb-10 text-text-color">
       <Header />
       <Intro />
       <Socials />

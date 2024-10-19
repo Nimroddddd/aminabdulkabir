@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Zoom } from "@mui/material";
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 function Header() {
 
@@ -40,7 +41,7 @@ function Header() {
       <header className="bg-blue-300 text-2xl h-screen sticky inset-0 z-10">
         <div className="flex items-center justify-between px-20 py-8">
           <h2 className="text-lg">Amin</h2>
-          <button className="" onClick={handleActive}><MenuIcon /></button>
+          <button className="" onClick={handleActive}>{!active ? <MenuIcon /> : <ExpandLessIcon />}</button>
         </div>
         <DropDownHeader />
       </header>

@@ -22,7 +22,7 @@ function Projects() {
   return(
     <div id="Projects" className="py-10 bg-gradient-to-bl from-cyan-200 to-blue-200">
       <h2 className="text-center text-2xl sm:text-5xl mb-10 font-caveat"><span className="underline">Pro</span>jects</h2>
-      <div className="flex justify-center gap-24">
+      <div className="flex justify-center gap-24 lg:flex-row flex-col items-center">
         {ProjectData.map(listProjects)}
       </div>
     </div>
