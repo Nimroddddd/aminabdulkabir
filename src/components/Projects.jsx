@@ -3,9 +3,9 @@ import ProjectData from "./ProjectData";
 
 function Projects() {
 
-  function listProjects(project) {
+  function listProjects(project, index) {
     return (
-      <div className="bg-blue-50 w-72 sm:w-96 pb-5 hover:scale-110 duration-500">
+      <div className="bg-blue-50 w-72 sm:w-96 pb-5 hover:scale-110 duration-500" key={index}>
         <img src={project.image} className="h-60 mb-16"></img> 
         <div className="px-5">
           <p className="text-xl mb-8">{project.name}</p>

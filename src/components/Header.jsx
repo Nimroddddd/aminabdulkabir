@@ -1,9 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import MenuIcon from '@mui/icons-material/Menu';
+import { Zoom } from "@mui/material";
 
 function Header() {
 
+  const [active, setActive] = useState(false)
 
-  return (
+  function handleActive() {
+    setActive(prev => !prev)
+  }
+
+  function DropDownHeader() {
+    return (
+      <ul className="flex flex-col gap-10 mt-5 justify-center items-center text-2xl">
+        <a href="#"><li onClick={handleActive}>Home</li></a>
+        <a href="#About" onClick={handleActive}><li>About</li></a>
+        <a href="#Skills" onClick={handleActive}><li>Skills</li></a>
+        <a href="#Projects" onClick={handleActive}><li>Projects</li></a>
+        <a href="#Contact" onClick={handleActive}><li>Contact</li></a>
+      </ul>
+    )
+  }
+
+  return !active ? (
     <header className="bg-blue-300 text-lg md:text-2xl flex items-center justify-between px-20 py-8 shadow-lg sticky inset-0 z-10">
       <h2>Amin</h2>
       <ul className="hidden sm:flex gap-5">
@@ -13,7 +32,19 @@ function Header() {
         <a href="#Projects"><li>Projects</li></a>
         <a href="#Contact"><li>Contact</li></a>
       </ul>
+      <button className="sm:hidden" onClick={handleActive}><MenuIcon /></button>
     </header>
+  ) :
+  (
+    <Zoom in={true}>
+      <header className="bg-blue-300 text-2xl h-screen sticky inset-0 z-10">
+        <div className="flex items-center justify-between px-20 py-8">
+          <h2 className="text-lg">Amin</h2>
+          <button className="" onClick={handleActive}><MenuIcon /></button>
+        </div>
+        <DropDownHeader />
+      </header>
+    </Zoom>
   )
 }
 
