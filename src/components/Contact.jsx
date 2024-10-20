@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 
 function Contact() {
@@ -53,7 +55,7 @@ function Contact() {
           value={details.message}
           onChange={handleChange}
         />
-        <button type="submit" className="bg-blue-900 text-white text-2xl py-3 hover:bg-blue-500">Send Message</button>
+        <Button variant="contained" type="submit" className="h-14"><p className="text-lg">Send Message</p></Button>
       </form>
     </div>
   )
