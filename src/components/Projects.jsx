@@ -4,16 +4,27 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 function Projects() {
 
+  function listTools(tool, index) {
+    return (
+      <div key={index}>
+        <p className="text-white p-1 rounded text-sm sm:text-base" style={{backgroundColor: "#3c4248"}} >{tool}</p>
+      </div>
+    )
+  }
+
   function listProjects(project, index) {
     return (
-      <div className="bg-cyan-300 w-72 sm:w-96 pb-5 hover:scale-110 duration-500" key={index}>
+      <div className="bg-cyan-200 w-72 sm:w-96 pb-5 hover:scale-110 duration-500 shadow-2xl rounded" key={index}>
         <img src={project.image} className="h-60 mb-16"></img> 
         <div className="px-5">
-          <p className="text-xl mb-8">{project.name}</p>
+          <p className="text-xl mb-8 font-bold">{project.name}</p>
           <p>{project.description}</p>
+          <div className="flex gap-3 mt-2">
+            {project.tools.map(listTools)}
+          </div>
           <div className="flex justify-between mt-8 text-base sm:text-xl">
-            <a href={project.live} target="_blank"><button className=" h-10 w-20 sm:w-32 bg-blue-700 text-white hover:bg-blue-500">Live <ArrowOutwardIcon /></button></a>
-            <a href={project.code} target="_blank"><button className="border border-blue-700 h-10 w-20 sm:w-32 hover:bg-blue-700 hover:text-white" >Code {project.github}</button></a>
+            <a href={project.live} target="_blank"><button className=" h-10 w-20 sm:w-32 bg-blue-200 hover:bg-blue-300 rounded">Live <ArrowOutwardIcon /></button></a>
+            <a href={project.code} target="_blank"><button className="border-2 border-blue-200 h-10 w-20 sm:w-32 hover:bg-blue-200 duration-300" >Code {project.github}</button></a>
           </div>
         </div>
       </div>
