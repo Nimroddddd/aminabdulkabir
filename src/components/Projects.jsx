@@ -14,7 +14,7 @@ function Projects() {
 
   function listProjects(project, index) {
     return (
-      <div className="bg-cyan-200 w-72 sm:w-96 pb-5 hover:scale-110 duration-500 shadow-2xl rounded" key={index}>
+      <div className="w-72 sm:w-96 pb-5 hover:scale-110 duration-500 shadow-2xl rounded" key={index}>
         <img src={project.image} className="h-60 mb-16"></img> 
         <div className="px-5">
           <p className="text-xl mb-8 font-bold">{project.name}</p>
