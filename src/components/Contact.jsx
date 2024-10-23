@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 
 function Contact() {
+
+  const custom = createTheme({
+    palette: {
+      cyan: {
+        main: '#a5f3fc',
+        light: 'yellow',
+        dark: '#6699CC',
+        contrastText: '#66fcf1',
+      },
+    },
+  });
+
 
   const [details, setDetails] = useState({
     name: "",
@@ -55,7 +68,9 @@ function Contact() {
           value={details.message}
           onChange={handleChange}
         />
-        <Button variant="contained" type="submit" className="h-14"><p className="text-lg">Send Message</p></Button>
+        <ThemeProvider theme={custom}>
+          <Button color="cyan" variant="contained" type="submit" className="h-14"><p className="text-lg text-black">Send Message</p></Button>
+        </ThemeProvider>
       </form>
     </div>
   )
