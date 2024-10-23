@@ -10,7 +10,7 @@ function Contact() {
   const custom = createTheme({
     palette: {
       cyan: {
-        main: '#a5f3fc',
+        main: '#bfdbfe',
         light: 'yellow',
         dark: '#6699CC',
         contrastText: '#66fcf1',
@@ -33,11 +33,14 @@ function Contact() {
     e.preventDefault();
     const form = e.target
     console.log(form)
-    try {
-      await emailjs.sendForm("gmail_service", "gmail_template", form)
-      alert("Success!")
-    } catch(err) {
-      alert(err)
+    const {name, email, message} = details
+    if (name !== "" && email !== "" && message !== "") {
+      try {
+        await emailjs.sendForm("gmail_service", "gmail_template", form)
+        alert("Success!")
+      } catch(err) {
+        alert(err)
+      }
     }
   }
 

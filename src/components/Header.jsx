@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Zoom } from "@mui/material";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -6,6 +6,15 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 function Header() {
 
   const [active, setActive] = useState(false)
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.scrollY > 200 ? setTop(false) : setTop(true)
+    };
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [top]);
 
   function handleActive() {
     setActive(prev => !prev)
@@ -24,7 +33,7 @@ function Header() {
   }
 
   return !active ? (
-    <header className="bg-inherit text-lg md:text-2xl flex items-center justify-between px-20 py-8 shadow-lg sticky inset-0 z-10">
+    <header className={`bg-gradient-to-r from-blue-200 to-cyan-200 text-lg md:text-2xl flex items-center justify-between px-20 py-8 sticky inset-0 z-10 ${!top && `shadow-lg`}`}>
       <h2 className="font-bold">Amin</h2>
       <ul className="hidden sm:flex gap-5">
         <a href="#"><li>Home</li></a>
