@@ -18,8 +18,8 @@ function Intro() {
       </GradientText>
       <p className='text-base sm:text-2xl'>Ever passionate and vibrant about combining frontends and backends to transform raw ideas into reality.</p>
       <div className="flex justify-evenly gap-10 mt-8">
-        <a href="#Contact"><button className="rounded h-12 w-28 bg-tertiary-purple bg-blue-700 text-white hover:bg-blue-400 duration-300">Contact me</button></a>
-        <a href="https://docs.google.com/document/d/1_7DEIDy1SmDHkb51i6HGL-L6azjDftasfxDgGTtPrfk/edit?usp=sharing" target='_blank'><button  className="border-2 border-blue-700 hover:bg-blue-700 hover:text-white hover:border-2 h-12 w-28 duration-300 rounded">Resume</button></a>
+        <a href="#Contact"><button className="rounded h-12 w-28 bg-tertiary-purple bg-blue-200 text-black hover:bg-blue-400 duration-300 font-semibold">Contact me</button></a>
+        <a href="https://docs.google.com/document/d/1_7DEIDy1SmDHkb51i6HGL-L6azjDftasfxDgGTtPrfk/edit?usp=sharing" target='_blank'><button  className="border-4 border-blue-200 hover:bg-blue-200 text-black font-semibold hover:border-2 h-12 w-28 duration-300 rounded shadow-2xl">Resume</button></a>
       </div>
     </div>
   )
