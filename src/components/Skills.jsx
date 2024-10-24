@@ -18,7 +18,7 @@ function Skills() {
     }
 
     return(
-      <div key={index} className="flex flex-col justify-center items-center py-2 px-1 md:py-6 w-20 md:w-28 md:h-36 hover:scale-110 duration-500 shadow-2xl" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} style={{color: mouseOn ? skill.color : "black", borderColor: mouseOn ? skill.color : "#fff"}}>
+      <div key={index} className="flex flex-col justify-center items-center py-2 px-1 md:py-6 w-20 md:w-28 md:h-36 hover:scale-110 duration-500 shadow-xl" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} style={{color: mouseOn ? skill.color : "black", borderColor: mouseOn ? skill.color : "#fff"}}>
         {skill.icon}
         <p className="text-center text-sm mt-3">{skill.name}</p>
       </div>
