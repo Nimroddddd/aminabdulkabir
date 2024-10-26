@@ -10,7 +10,7 @@ import Footer from "./Footer"
 
 function App() {
   return (
-    <div className="w-full bg-blue-200 h-full text-text-color scroll-smooth">
+    <div className="w-full bg-blue-200 h-full text-text-color scroll-smooth" id="Home">
       <Header />
       <Intro />
       <Socials />
