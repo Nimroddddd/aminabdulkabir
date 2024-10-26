@@ -33,7 +33,7 @@ function Header() {
 
   function DropDownHeader() {
     return (
-      <ul className="flex flex-col gap-10 mt-5 justify-center items-center text-2xl">
+      <ul className="flex flex-col gap-10 mt-5 justify-center items-center text-4xl font-extrabold">
         <a ><li onClick={handleActive} id="home">Home</li></a>
         <a ><li onClick={handleActive} id="about">About</li></a>
         <a ><li onClick={handleActive} id="skills">Skills</li></a>
@@ -45,7 +45,7 @@ function Header() {
 
   return !active ? (
     <header className={`bg-gradient-to-r from-blue-200 to-cyan-200 text-lg md:text-2xl flex items-center justify-between px-20 py-8 sticky inset-0 z-10 ${!top && `shadow-lg`}`}>
-      <h2 className="font-bold">Amin</h2>
+      <h2 className="font-extrabold">Amin</h2>
       <ul className="hidden sm:flex gap-5">
         <a href=""><li id="home" onClick={handleSectionClick}>Home</li></a>
         <a href=""><li id="about" onClick={handleSectionClick}>About</li></a>
@@ -60,7 +60,7 @@ function Header() {
     <Zoom in={true}>
       <header className={`bg-blue-300 text-2xl sticky inset-0 z-10 ${active ? `h-screen` : `h-0`}`}>
         <div className="flex items-center justify-between px-20 py-8">
-          <h2 className="text-lg">Amin</h2>
+          <h2 className="text-lg font-extrabold">Amin</h2>
           <button className="" onClick={handleActive}><ExpandLessIcon /></button>
         </div>
         <DropDownHeader />
