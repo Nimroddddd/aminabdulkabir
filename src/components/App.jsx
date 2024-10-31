@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties, useState } from "react";
 import Header from "./Header"
 import Intro from "./Intro";
 import Socials from "./Socials"
@@ -9,6 +9,7 @@ import Contact from "./Contact"
 import Footer from "./Footer"
 
 function App() {
+
   return (
     <div className="w-full bg-blue-200 h-full text-text-color scroll-smooth" id="Home">
       <Header />
