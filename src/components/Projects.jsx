@@ -19,7 +19,7 @@ function Projects() {
         <div className="px-5">
           <p className="text-xl mb-8 font-bold">{project.name}</p>
           <p>{project.description}</p>
-          <div className="flex gap-3 mt-2">
+          <div className="flex flex-wrap gap-3 mt-2">
             {project.tools.map(listTools)}
           </div>
           <div className="flex justify-between mt-8 text-base sm:text-xl">
