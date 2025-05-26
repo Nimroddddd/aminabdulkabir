@@ -18,7 +18,7 @@ function About() {
         and worked with several clients. find attacehd, the link to my resume for more in-depth reference
       </p>
       <br />
-      <a href="https://docs.google.com/document/d/1_7DEIDy1SmDHkb51i6HGL-L6azjDftasfxDgGTtPrfk/edit?usp=sharing" target='_blank'><button  className="bg-blue-400 text-black font-semibold h-12 w-28 rounded shadow-2xl">Resume</button></a>
+      <a href="https://docs.google.com/document/d/1n4PC69suakP8NpI9fdsbBN06EU3uvBilCmt-78xaYVQ/edit" target="_blank" rel="noopener noreferrer" ><button  className="bg-blue-400 text-black font-semibold h-12 w-28 rounded shadow-2xl">Resume</button></a>
 
     </div>
   )
