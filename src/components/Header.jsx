@@ -6,8 +6,29 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 function Header() {
 
   const [active, setActive] = useState(false)
-  const [headerActive, setHeaderActive] = useState(true)
   const [top, setTop] = useState(true);
+  const headerItems = [
+    {
+      id: "home",
+      text: "Home"
+    },
+    {
+      id: "about",
+      text: "About"
+    },
+    {
+      id: "skills",
+      text: "Skills"
+    },
+    {
+      id: "projects",
+      text: "Projects"
+    },
+    {
+      id: "contact",
+      text: "Contacts"
+    },
+  ]
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -22,10 +43,11 @@ function Header() {
     setTimeout(() => {handleSectionClick(e)}, 0)
 
   }
-
+  
   function handleSectionClick(e) {
+    console.log(e.target.id)
+    const { id } = e.target;
     e.preventDefault()
-    const {id} = e.target;
     const target = id.slice(0,1).toUpperCase() + id.slice(1);
     const element = document.getElementById(`${target}`);
     element.scrollIntoView({behavior: "smooth", block: "start"})
@@ -34,11 +56,7 @@ function Header() {
   function DropDownHeader() {
     return (
       <ul className="flex flex-col gap-10 mt-5 justify-center items-center text-4xl font-extrabold">
-        <a ><li onClick={handleActive} id="home">Home</li></a>
-        <a ><li onClick={handleActive} id="about">About</li></a>
-        <a ><li onClick={handleActive} id="skills">Skills</li></a>
-        <a ><li onClick={handleActive} id="projects">Projects</li></a>
-        <a ><li onClick={handleActive} id="contact">Contact</li></a>
+        {headerItems.map(item => <li id={item.id} onClick={handleActive}>{item.text}</li>)}
       </ul>
     )
   }
@@ -46,12 +64,8 @@ function Header() {
   return !active ? (
     <header className={`bg-gradient-to-r from-blue-200 to-cyan-200 text-lg md:text-2xl flex items-center justify-between px-20 py-8 sticky inset-0 z-10 ${!top && `shadow-lg`}`}>
       <h2 className="font-extrabold">Amin</h2>
-      <ul className="hidden sm:flex gap-5">
-        <a href=""><li id="home" onClick={handleSectionClick}>Home</li></a>
-        <a href=""><li id="about" onClick={handleSectionClick}>About</li></a>
-        <a href=""><li id="skills" onClick={handleSectionClick}>Skills</li></a>
-        <a href=""><li id="projects" onClick={handleSectionClick}>Projects</li></a>
-        <a href=""><li id="contact" onClick={handleSectionClick}>Contact</li></a>
+      <ul className="hidden sm:flex gap-10">
+        {headerItems.map(item => <li className="cursor-pointer hover:text-blue-500 transition-colors" id={item.id} onClick={handleSectionClick}>{item.text}</li>)}
       </ul>
       <button className="sm:hidden" onClick={handleActive}><MenuIcon /></button>
     </header>
