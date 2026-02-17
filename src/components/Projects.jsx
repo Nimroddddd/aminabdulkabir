@@ -7,7 +7,7 @@ function Projects() {
   function listTools(tool, index) {
     return (
       <div key={index}>
-        <p className="text-white p-1 rounded text-sm sm:text-base" style={{backgroundColor: "#3c4248"}} >{tool}</p>
+        <p className="text-white py-1 px-2 rounded text-sm sm:text-base" style={{backgroundColor: "#3c4248"}} >{tool}</p>
       </div>
     )
   }
@@ -17,9 +17,9 @@ function Projects() {
       <div className="w-72 sm:w-96 pb-5 hover:scale-110 duration-500 shadow-2xl rounded" key={index}>
         <img src={project.image} className="h-60 mb-16"></img> 
         <div className="px-5">
-          <p className="text-xl mb-8 font-bold">{project.name}</p>
-          <p>{project.description}</p>
-          <div className="flex flex-wrap gap-3 mt-2">
+          <p className="text-xl mb-4 font-bold">{project.name}</p>
+          <p className="mb-7 h-20">{project.description}</p>
+          <div className="flex flex-wrap gap-3 h-20">
             {project.tools.map(listTools)}
           </div>
           <div className="flex justify-between mt-8 text-base sm:text-xl">

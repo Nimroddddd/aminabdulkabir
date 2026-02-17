@@ -73,6 +73,8 @@ function Contact() {
         />
         <ThemeProvider theme={custom}>
           <Button color="cyan" variant="contained" type="submit" className="h-14"><p className="text-lg text-black">Send Message</p></Button>
+          <a href='https://paystack.com' target="_blank"><Button color="cyan" variant="contained" type="submit" className="h-14"><p className="text-lg text-black">Proceed to payment</p></Button></a>
+
         </ThemeProvider>
       </form>
     </div>
