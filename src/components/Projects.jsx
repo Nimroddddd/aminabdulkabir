@@ -18,8 +18,8 @@ function Projects() {
         <img src={project.image} className="h-60 mb-16"></img> 
         <div className="px-5">
           <p className="text-xl mb-4 font-bold">{project.name}</p>
-          <p className="mb-7 h-20">{project.description}</p>
-          <div className="flex flex-wrap gap-3 h-20">
+          <p className="mb-7 h-32 sm:h-20">{project.description}</p>
+          <div className="flex flex-wrap gap-3 h-22">
             {project.tools.map(listTools)}
           </div>
           <div className="flex justify-between mt-8 text-base sm:text-xl">
